@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 require('dotenv').config()
+const format  = require('date-fns/fp/format').default
 const request = require('./lib/request')(process.env.TOKEN);
-const argv = require('process.argv')(process.argv.slice(2));
+const argv    = require('process.argv')(process.argv.slice(2));
 
 const config = argv({ update: true, domain: null, records: '' });
 
@@ -18,9 +19,7 @@ async function app() {
     const { data } = await request('https://api.myip.com');
     const publicIp = data.ip;
     const responses = await Promise.all(records.map(record => updateRecord(domain, record, publicIp)));
-    console.log(new Date().toLocaleString('en-US', {
-      timeZone: 'America/Bogota'
-    }) + '\n  ' + responses.join('\n  '));
+    console.log(format('yyyy-MM-dd HH:mm:ss')(new Date()) + '\n  ' + responses.join('\n  '));
     process.exit(0);
   } catch (error) {
     console.error(error);

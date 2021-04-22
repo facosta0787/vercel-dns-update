@@ -1,6 +1,6 @@
 {
   "name": "vercel-dns-update",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "small job to update vercel dns records",
   "main": "dns-update.js",
   "scripts": {
@@ -19,6 +19,7 @@
   "author": "facosta0787",
   "license": "MIT",
   "dependencies": {
+    "date-fns": "^2.21.1",
     "node-fetch": "2.6.1",
     "process.argv": "0.6.0"
   },

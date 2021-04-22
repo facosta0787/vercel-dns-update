@@ -1,4 +1,4 @@
 #!/bin/bash
 
-curl https://raw.githubusercontent.com/facosta0787/vercel-dns-update/v0.0.1/bin/dns-update -o- | cat > dns-update &&
+curl -o- https://raw.githubusercontent.com/facosta0787/vercel-dns-update/main/bin/dns-update | cat > dns-update &&
 chmod +x dns-update
