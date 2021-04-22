@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 require('dotenv').config()
 const format  = require('date-fns/fp/format').default
 const request = require('./lib/request')(process.env.TOKEN);
