@@ -1,14 +1,14 @@
 {
   "name": "vercel-dns-update",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "small job to update vercel dns records",
   "main": "dns-update.js",
   "scripts": {
     "clean": "rm -rf ./bin",
     "rename": "mv ./bin/dns-update.js ./bin/dns-update && chmod +x ./bin/dns-update",
     "start": "",
-    "build": "npm run clean && NODE_ENV=production node parcel.config.js && npm run rename",
-    "webpack:build": "rm -rf ./bin/dns-update* && webpack"
+    "parcel:build": "npm run clean && NODE_ENV=production node parcel.config.js && npm run rename",
+    "build": "rm -rf ./bin/dns-update* && webpack"
   },
   "keywords": [
     "node",
