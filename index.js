@@ -2,7 +2,7 @@ require('dotenv').config()
 const format       = require('date-fns/fp/format').default
 const request      = require('./lib/request')(process.env.TOKEN)
 const argv         = require('process.argv')(process.argv.slice(2))
-const updateRecord = require('./lib/update-record').default
+const updateRecord = require('./lib/update-record')
 
 const config = argv({ update: true, domain: null, records: '' })
 
