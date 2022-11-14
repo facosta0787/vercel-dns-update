@@ -5,7 +5,7 @@ const RenamePlugin = require('./lib/rename-webpack-plugin')
 
 module.exports = {
   mode: 'production',
-  target: 'node12.20',
+  target: 'node16.16',
   entry: './index.js',
   output: {
     path: path.resolve(__dirname, 'bin'),
